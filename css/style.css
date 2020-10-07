@@ -1,0 +1,88 @@
+body {
+  background: white;
+  font-family: "Futura Md BT";
+  padding-top: 30px; }
+
+header .navbar {
+  /*max-height: 85px */
+  background: white;
+  padding: 0;
+  margin: 0; }
+  header .navbar .container .navbar-brand {
+    font-family: "rio de janeiro";
+    font-style: bold;
+    color: #062826;
+    font-size: 30px;
+    padding-left: 0px; }
+  header .navbar .container .custom-toggler {
+    border: none; }
+    header .navbar .container .custom-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
+  header .navbar .container .navbar-collapse .navbar-nav {
+    /*Horizontal display */
+    display: flex;
+    flex-flow: row nowrap;
+    /****************** */ }
+    header .navbar .container .navbar-collapse .navbar-nav .nav-item {
+      padding: 0px 10px; }
+      header .navbar .container .navbar-collapse .navbar-nav .nav-item a {
+        color: black;
+        font-size: 20px; }
+        header .navbar .container .navbar-collapse .navbar-nav .nav-item a .nav-icon {
+          font-size: 30px; }
+        header .navbar .container .navbar-collapse .navbar-nav .nav-item a .ig-icon {
+          font-size: 30px; }
+        header .navbar .container .navbar-collapse .navbar-nav .nav-item a:hover {
+          text-decoration: underline; }
+
+.cover {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
+.main {
+  padding: 0;
+  margin: 0;
+  margin-top: -25px; }
+  .main .container {
+    padding: 0;
+    margin: 0; }
+    .main .container .row {
+      padding: 0;
+      margin: 0;
+      width: 100vw; }
+      .main .container .row .col {
+        padding: 0;
+        margin: 0; }
+      .main .container .row .col-3 {
+        padding: 0;
+        margin: 0; }
+      .main .container .row .col-6 {
+        padding: 0;
+        margin: 0; }
+
+footer {
+  padding: 0;
+  margin: 0; }
+  footer .container {
+    padding: 0;
+    margin: 0; }
+    footer .container .row {
+      padding: 0;
+      margin: 0;
+      width: 100vw;
+      background: black; }
+      footer .container .row .col-6 {
+        padding: 0;
+        margin: 0;
+        background: white; }
+        footer .container .row .col-6 .footer-content {
+          padding-right: 50px; }
+          footer .container .row .col-6 .footer-content a {
+            color: black; }
+            footer .container .row .col-6 .footer-content a:hover {
+              text-decoration: underline; }
+            footer .container .row .col-6 .footer-content a .mail-icon {
+              color: black;
+              font-size: 30px; }
+
+/*# sourceMappingURL=style.css.map */

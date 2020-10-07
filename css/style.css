@@ -53,12 +53,13 @@ header .navbar {
       .main .container .row .col {
         padding: 0;
         margin: 0; }
-      .main .container .row .col-3 {
-        padding: 0;
-        margin: 0; }
+        .main .container .row .col .carrousel-1 {
+          padding: 2px; }
       .main .container .row .col-6 {
         padding: 0;
         margin: 0; }
+        .main .container .row .col-6 .carrousel-1 {
+          padding: 2px; }
 
 footer {
   padding: 0;

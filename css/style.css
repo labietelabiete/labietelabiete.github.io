@@ -1,7 +1,7 @@
 body {
   background: white;
   font-family: "Futura Md BT";
-  padding-top: 30px; }
+  padding-top: 40px; }
 
 header .navbar {
   /*max-height: 85px */
@@ -73,12 +73,10 @@ footer {
     footer .container .row {
       padding: 0;
       margin: 0;
-      width: 100vw;
-      background: black; }
+      width: 100vw; }
       footer .container .row .col-6 {
         padding: 0;
-        margin: 0;
-        background: white; }
+        margin: 0; }
         footer .container .row .col-6 .footer-content {
           padding-right: 50px; }
           footer .container .row .col-6 .footer-content a {

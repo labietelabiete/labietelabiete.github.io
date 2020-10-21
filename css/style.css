@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "rio";
+  src: url(../fonts/rio.ttf) format("truetype");
+  font-style: normal; }
 body {
   background: white;
   font-family: "Futura Md BT";
@@ -7,7 +11,8 @@ header .navbar {
   /*max-height: 85px */
   background: white;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  box-shadow: 10px; }
   header .navbar .container .logo-container .logo-img {
     max-height: 50px;
     margin-top: 6px; }
@@ -43,8 +48,6 @@ header .navbar {
   margin-bottom: 0; }
 
 .main {
-  padding: 0;
-  margin: 0;
   margin-top: -25px; }
   .main .container {
     padding: 0;
@@ -63,6 +66,8 @@ header .navbar {
         margin: 0; }
         .main .container .row .col-6 .carrousel-1 {
           padding: 2px; }
+      .main .container .row .col-9 .vinyl h1 {
+        font-family: rio; }
 
 footer {
   padding: 0;

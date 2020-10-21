@@ -33,9 +33,12 @@ header .navbar {
         header .navbar .container .navbar-collapse .navbar-nav .nav-item a:hover {
           text-decoration: underline; }
 
+.cover {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
 .main {
-  padding: 0;
-  margin: 0; }
+  margin-top: -25px; }
   .main .container {
     padding: 0;
     margin: 0; }
@@ -43,32 +46,18 @@ header .navbar {
       padding: 0;
       margin: 0;
       width: 100vw; }
+      .main .container .row .col {
+        padding: 0;
+        margin: 0; }
+        .main .container .row .col .carrousel-1 {
+          padding: 2px; }
       .main .container .row .col-6 {
         padding: 0;
-        margin: 0;
-        height: 800px; }
-        .main .container .row .col-6 .logo .logo-img {
-          margin-top: 100px;
-          max-width: 150px; }
-          .main .container .row .col-6 .logo .logo-img:hover {
-            max-width: 220px;
-            margin-top: 90px; }
-        .main .container .row .col-6 .logo-text-gopro a {
-          font-family: "Pacifico", cursive;
-          color: white;
-          font-size: 15px; }
-          .main .container .row .col-6 .logo-text-gopro a:hover {
-            text-decoration-line: none; }
-        .main .container .row .col-6 .logo-text-vinyls a {
-          font-family: "Pacifico", cursive;
-          color: black;
-          font-size: 15px; }
-          .main .container .row .col-6 .logo-text-vinyls a:hover {
-            text-decoration-line: none; }
-      .main .container .row .goprows {
-        background: black; }
-      .main .container .row .vinylsws {
-        background: white; }
+        margin: 0; }
+        .main .container .row .col-6 .carrousel-1 {
+          padding: 2px; }
+      .main .container .row .col-9 .vinyl h1 {
+        font-family: rio; }
 
 footer {
   padding: 0;
@@ -79,12 +68,10 @@ footer {
     footer .container .row {
       padding: 0;
       margin: 0;
-      width: 100vw;
-      background: black; }
+      width: 100vw; }
       footer .container .row .col-6 {
         padding: 0;
-        margin: 0;
-        background: white; }
+        margin: 0; }
         footer .container .row .col-6 .footer-content {
           padding-right: 50px; }
           footer .container .row .col-6 .footer-content a {

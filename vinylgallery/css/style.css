@@ -64,21 +64,23 @@ footer .container {
       footer .container .row .col-6 .modal .modal-header h1 {
         font-size: 20px;
         color: black; }
-    footer .container .row .col-6 .modal .modal-body .row {
-      background: white;
-      width: auto;
-      padding: 10px;
-      margin: auto; }
-      footer .container .row .col-6 .modal .modal-body .row .col {
-        padding: auto;
+    footer .container .row .col-6 .modal .modal-body {
+      padding: 0px; }
+      footer .container .row .col-6 .modal .modal-body .row {
+        background: white;
+        width: auto;
+        padding: 10px 0px;
         margin: auto; }
-      footer .container .row .col-6 .modal .modal-body .row .col-6 {
-        padding: 10px;
-        margin: auto; }
-      footer .container .row .col-6 .modal .modal-body .row .btn-submit {
-        background: black;
-        color: white; }
-      footer .container .row .col-6 .modal .modal-body .row .fas {
-        color: black; }
+        footer .container .row .col-6 .modal .modal-body .row .col {
+          padding: auto;
+          margin: auto; }
+        footer .container .row .col-6 .modal .modal-body .row .col-6 {
+          padding: 10px;
+          margin: auto; }
+        footer .container .row .col-6 .modal .modal-body .row .btn-submit {
+          background: black;
+          color: white; }
+        footer .container .row .col-6 .modal .modal-body .row .fas {
+          color: black; }
 
 /*# sourceMappingURL=style.css.map */

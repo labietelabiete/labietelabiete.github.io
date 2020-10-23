@@ -36,12 +36,24 @@ header .navbar {
 .main .container .row {
   padding: 0;
   margin: 0; }
-  .main .container .row .col-6 {
+  .main .container .row .socialmedia-link {
+    padding: 5px; }
+    .main .container .row .socialmedia-link i {
+      font-size: 18px; }
+    .main .container .row .socialmedia-link .fa-soundcloud {
+      color: #FE5000; }
+    .main .container .row .socialmedia-link .fa-youtube {
+      color: #FF0000; }
+    .main .container .row .socialmedia-link .fa-instagram {
+      color: #C13584; }
+    .main .container .row .socialmedia-link .fa-spotify {
+      color: #1DB954; }
+  .main .container .row .col-8 {
     padding: 0;
     margin: 0; }
-    .main .container .row .col-6 .vinyl {
+    .main .container .row .col-8 .vinyl {
       padding: 0;
-      margin: -80px 0; }
+      margin: -20px 0; }
 
 footer .container {
   padding: 0;

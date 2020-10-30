@@ -1,0 +1,95 @@
+/*Standard structure*/
+#wrapper
+  overflow-x: hidden
+  #sidebar-wrapper   
+    min-height: 100vh
+    margin-left: -240px
+    -webkit-transition: margin .25s ease-out
+    -moz-transition: margin .25s ease-out
+    -o-transition: margin .25s ease-out
+    transition: margin .25s ease-out
+    .sidebar-heading
+      padding: 14px 14px
+      font-size: 18px
+    .list-group
+      width: 240px
+      a
+        color: black
+        padding: 12px 20px
+        border-top: 1px solid grey
+        outline: none
+      .last-item
+        a
+          border-bottom: 1px solid grey
+      .dropdown-menu
+        min-width: 235px
+        background: white
+        a 
+          border-top: none
+          border-bottom: 1px solid grey
+          &:active
+            background-color: white
+          &:hover
+            background-color: white
+#page-content-wrapper
+  min-width: 100vw
+#wrapper.toggled
+  #sidebar-wrapper
+    margin-left: 0px
+
+
+
+
+
+/*Customization*/
+#wrapper
+  #sidebar-wrapper
+    .sidebar-heading
+      .logo-letters
+          max-width: 150px
+          padding-top: 25px
+    .list-group
+      a
+        padding-bottom: 0px
+      .dropdown-menu
+        //background: #dddddd
+
+/*
+@media (max-width: 767.98px)
+  .dropdwon-menu
+    padding: 0
+    margin-top: 0
+    border: 0
+  .dropdwon-menu:before
+    content: ""
+    display: block
+    padding-top: 0.5rem
+  .dropdown-menu:after
+    content: ""
+    display: block
+    padding-bottom: 0.5rem
+@media (min-width: 768px)
+  .dropdown
+    div
+      position: absolute
+      clip: rect(0.5rem,9999px,9999px,-9999px)
+  .dropdwon-menu
+    height: auto
+    transition: transform .35s ease
+  .dropdown-menu.collapse, .dropdown-menu.sliding
+    transform: translate(0,-100%)
+  .dropdown-menu.collapse:not(.show)
+    display: block
+  .dropdown-menu.collapse.show
+    transform: translate(0,0)
+
+
+
+
+
+
+
+
+
+
+

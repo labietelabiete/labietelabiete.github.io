@@ -1,0 +1,55 @@
+
+/* Classes to animate ---------------------------- */
+.nextChange {
+	position: relative;
+	animation: nextMonth 0.4s backwards;
+}
+
+.preChange {
+	animation: prevMonth 0.4s forwards;
+}
+
+/* ---------------------------------------------------------------
+ANIMATIONS
+--------------------------------------------------------------- */
+/* Navigation animations */
+@keyframes prevMonth {
+	0% {
+		opacity: 0%;
+		width: 0%;
+	}
+	100% {
+		opacity: 100%;
+		width: 100%;
+	}
+}
+
+@keyframes nextMonth {
+	0%{
+		opacity: 0%;
+		width: 0%;
+		left: 100%;
+	}
+	100% {
+		opacity: 100%;
+		width: 100%;
+		left: 0%;
+	}
+}
+
+/* Title overflow animation */
+@keyframes scroll-text {
+	0% {
+		transform: translateX(0%);
+	}
+	90% {
+		transform: translate(-100%);
+	}
+	95% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+

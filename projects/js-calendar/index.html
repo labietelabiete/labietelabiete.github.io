@@ -1,0 +1,264 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/mediaQueries.css">
+    <link rel="stylesheet" href="./assets//animation.css">
+    <title>JS Calendar</title>
+</head>
+
+<body>
+    <!-- Top part -->
+    <header>
+        <h4 id="title">JS Calendar</h4>
+        <div id="monthAndYear">
+            <h1 id="month">April</h1>
+            <h1 id="year">2021</h1>
+        </div>
+        <button class="newEventBtn" id="newEventBtn">Add Event</button>
+    </header>
+
+    <!-- Main part -->
+    <main>
+        <!-- Sidebar -->
+        <sidebar id="sidebar">
+            <!-- Expired events-->
+            <div id="expiredEventsContainer">
+                <h4 id="expiredEventsTitle">Expired Events</h4>
+                <div id="expiredEvents"></div>
+            </div>
+            <!-- Reminders-->
+            <div id="reminderContainer">
+                <h4 id="reminderTitle">Reminders</h4>
+                <div id="expiredReminders">
+                </div>
+            </div>
+            <div id = "eventTypes">
+                <!-- Work checkbox -->
+                <label class="checkbox">
+                    <span class="checkboxInput checkboxType">
+                        <input class="workPair" id="workCheckbox" type="checkbox" name="checkbox" checked>
+                        <span class="checkboxControl workCheckbox"></span>
+                    </span>
+                    <h2 class="checkboxLabel workLabel">Work</h2>
+                </label>
+                <!-- Personal checkbox -->
+                <label class="checkbox">
+                    <span class="checkboxInput checkboxType">
+                        <input class="sportPair" id="sportCheckbox" type="checkbox" name="checkbox" checked>
+                        <span class="checkboxControl sportCheckbox"></span>
+                    </span>
+                    <h2 class="checkboxLabel sportLabel">Sport</h2>
+                </label>
+                <!-- Study checkbox -->
+                <label class="checkbox">
+                    <span class="checkboxInput checkboxType">
+                        <input class="musicPair" id="musicCheckbox" type="checkbox" name="checkbox" checked>
+                        <span class="checkboxControl musicCheckbox"></span>
+                    </span>
+                    <h2 class="checkboxLabel musicLabel">Music</h2>
+                </label>
+                <!-- Other checkbox -->
+                <label class="checkbox">
+                    <span class="checkboxInput checkboxType">
+                        <input class="otherPair" id="otherCheckbox" type="checkbox" name="checkbox" checked>
+                        <span class="checkboxControl otherCheckbox"></span>
+                    </span>
+                    <h2 class="checkboxLabel otherLabel">Other</h2>
+                </label>
+            </div>
+        </sidebar>
+
+        <!-- Main right -->
+        <div id="mainRight">
+            <!-- Navigation buttons -->
+            <div id="monthButtons">
+                <button class="navBtn" id="previousMonthButton"><</button>
+                <button class="navBtn" id="nextMonthButton">></button>
+            </div>
+
+            <!-- Weekdays -->
+            <div id="weekdaysContainer">
+                <div class="weekday">Monday</div>
+                <div class="weekdayAbr">Mon</div>
+
+                <div class="weekday">Tuesday</div>
+                <div class="weekdayAbr">Tue</div>
+
+                <div class="weekday">Wednesday</div>
+                <div class="weekdayAbr">Wed</div>
+
+                <div class="weekday">Thursday</div>
+                <div class="weekdayAbr">Thu</div>
+
+                <div class="weekday">Friday</div>
+                <div class="weekdayAbr">Fri</div>
+
+                <div class="weekday">Saturday</div>
+                <div class="weekdayAbr">Sat</div>
+
+                <div class="weekday">Sunday</div>
+                <div class="weekdayAbr">Sun</div>
+            </div>
+
+            <!-- Calendar grid -->
+            <div id="calendarCont"></div>
+        </div>
+    </main>
+
+    <!-- MODALS -->
+
+    <!-- New event modal -->
+    <div id="newEventModal" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent">
+            <span class="close">&times;</span>
+            <form id="newEventForm">
+                <input type="text" class="eventTitle" name="title" id="titleNewEvent" placeholder="Title" maxlength="60"
+                    autofocus><br>
+
+                <select name="" class="eventType" id="typeNewEvent">
+                    <option class="eventTypeOption" value="none" selected disabled hidden>Type</option>
+                    <option class="eventTypeOption" value=0>Work</option>
+                    <option class="eventTypeOption" value=1>Sport</option>
+                    <option class="eventTypeOption" value=2>Music</option>
+                    <option class="eventTypeOption" value=3>Other</option>
+                </select> <br>
+
+                <label class="eventLabel" for="startNewEvent">Initial date</label><br>
+                <input class="eventDate" type="datetime-local" id="startNewEvent" name=""><br>
+
+                <!-- End date -->
+                <label class="checkbox checkboxLabel">
+                    <span class="checkboxInput">
+                        <input id="checkBoxEndDate" type="checkbox" name="checkbox">
+                        <span class="checkboxControl endCheckbox"></span>
+                    </span>
+                    <h2 class="eventLabel" id="endDateLabel">End date</h2>
+                </label>
+
+                <input class="eventDate" style="display: none" type="datetime-local" id="endNewEvent"
+                    name="trip-end"><br>
+
+                <!-- Reminder date -->
+                <label class="checkbox checkboxLabel">
+                    <span class="checkboxInput">
+                        <input id="reminderNewEvent" type="checkbox" name="checkbox">
+                        <span class="checkboxControl reminderCheckbox"></span>
+                    </span>
+                    <h2 class="eventLabel" id="reminderLabel">Reminder</h2>
+                </label>
+
+                <div id="reminderNewEventDiv" style="display: none">
+                    <label class="eventDate" for="timeReminderNewEvent">Time: </label>
+                    <select class="eventDate" name="" id="timeReminderNewEvent">
+                        <option value="" selected>Select one</option>
+                        <option value="5">5 min</option>
+                        <option value="10">10 min</option>
+                        <option value="15">15 min</option>
+                        <option value="30">30 min</option>
+                        <option value="60">1 hour</option>
+                    </select>
+                </div>
+                <br>
+                <label class="checkbox checkboxLabel">
+                    <span class="checkboxInput">
+                        <input id="descriptionCheckbox" type="checkbox" name="checkbox">
+                        <span class="checkboxControl descriptionCheckbox"></span>
+                    </span>
+                    <h2 class="eventLabel" id="descriptionLabel">Description</h2>
+                </label>
+
+                <textarea class="eventDescription" name="eventDesc" id="descriptionNewEvent" cols="30" rows="10"
+                    maxlength="500" style="display:none"></textarea><br>
+                <div class="btnDiv">
+                    <input class="modalBtn" type="button" value="Create" id="saveNewEvent">
+                    <input class="modalBtn" type="button" value="Cancel" id="cancelNewEvent">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Check event modal -->
+    <div id="checkEventModal" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent modalContentCheck">
+            <span class="close closeCheck">&times;</span>
+            <form id="checkEventForm">
+                <div id="titleEventContainer">
+                    <h2 class="eventTitle" id="titleEvent"></h2>
+                </div>
+                <h5 class="eventType" id="typeEvent"></h5>
+
+                <label class="eventLabel eventLabelCheck" for="startNewEvent">Initial date</label><br>
+                <p class="eventDate" id="startDateEvent"></p>
+
+                <label class="eventLabel eventLabelCheck" id="eventEndDateLabel" for="checkBoxEndDate">End
+                    date</label><br>
+                <p class="eventDate" id="endDateEvent"></p>
+
+                <label class="eventLabel eventLabelCheck" id="eventReminderLabel"
+                    for="reminderNewEvent">Reminder</label><br>
+                <p class="eventDate" id="reminderEvent"></p>
+
+                <label class="eventLabel eventLabelCheck eventDescriptionLabel" id="eventDescriptionLabelId"
+                    for="descriptionNewEvent">Description</label><br>
+                <p class="eventDate" id="descriptionEvent"></p>
+                <div class="btnDiv">
+                    <input class="modalBtn" type="button" value="OK" id="okCheckEventButton">
+                    <input class="modalBtn" type="button" value="Remove" id="RemoveEventButton">
+                </div>
+            </form>
+        </div>
+    </div>
+    <button style="display: none;" id="checkEventBtn">Check Event</button>
+
+
+    <!-- Footer -->
+    <footer>
+        <!-- Event types for mobile version -->
+        <div id="eventTypesMobile">
+            <!-- Work checkbox -->
+            <label class="checkbox">
+                <span class="checkboxInput checkboxType">
+                    <input class="workPair" id="workCheckboxMob" type="checkbox" name="checkbox" checked>
+                    <span class="checkboxControl workCheckbox"></span>
+                </span>
+            </label>
+            <!-- Personal checkbox -->
+            <label class="checkbox">
+                <span class="checkboxInput checkboxType">
+                    <input class="sportPair" id="sportCheckboxMob" type="checkbox" name="checkbox" checked>
+                    <span class="checkboxControl sportCheckbox"></span>
+                </span>
+            </label>
+            <!-- Study checkbox -->
+            <label class="checkbox">
+                <span class="checkboxInput checkboxType">
+                    <input class="musicPair" id="musicCheckboxMob" type="checkbox" name="checkbox" checked>
+                    <span class="checkboxControl musicCheckbox"></span>
+                </span>
+            </label>
+            <!-- Other checkbox -->
+            <label class="checkbox">
+                <span class="checkboxInput checkboxType">
+                    <input class="otherPair" id="otherCheckboxMob" type="checkbox" name="checkbox" checked>
+                    <span class="checkboxControl otherCheckbox"></span>
+                </span>
+            </label>
+        </div>
+        <!-- Add event button for mobile version -->
+        <button class="navBtn newEventBtn" id="newEventBtnMobile">+</button>
+    </footer>
+    <!-- Javascript -->
+    <script src="js/calendar.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/eventCalendar.js"></script>
+    <script src="js/reminder.js"></script>
+</body>
+
+</html>

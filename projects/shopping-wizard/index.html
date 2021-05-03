@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://kit.fontawesome.com/ecea200bd3.js" crossorigin="anonymous"></script>
+  <title>Dream Shoes</title>
+  <link rel="icon" type="image/png" href="/favicon.png" /> <!-- favicon -->
+</head>
+
+<body class="fadein">
+  <!--
+        =================================
+        HEADER
+        =================================
+    -->
+  <header>
+    <div class="logo">
+      <img src="./images/logo-dream-shoes.png" alt="" class="dream-logo">
+    </div>
+    <div class="quote">
+      <blockquote class="header-quote">“You see things; and you say, ‘Why?' But I dream things that never were; and I
+        say, ‘Why not?'”</blockquote>
+    </div>
+    <div class="container-pbar hide">
+      <div id="stepProgressBar">
+        <div class="step-pbar">
+          <div class="bullet-pbar first-bullet-pbar"></div>
+          <p class="step-text-pbar">Profile</p>
+        </div>
+        <div class="bar-pbar"></div>
+        <div class="step-pbar">
+          <div class="bullet-pbar"></div>
+          <p class="step-text-pbar">Address</p>
+        </div>
+        <div class="bar-pbar"></div>
+        <div class="step-pbar">
+          <div class="bullet-pbar"></div>
+          <p class="step-text-pbar">Shipping</p>
+        </div>
+        <div class="bar-pbar"></div>
+        <div class="step-pbar">
+          <div class="bullet-pbar "></div>
+          <p class="step-text-pbar">Finish</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--
+      =================================
+      ! MAIN
+      =================================
+      -->
+
+  <main>
+    <div class="timeout-error hide">
+    </div>
+
+    <div class="maindiv">
+      <!-- 
+        =================================
+        PRODUCT PAGE
+        =================================
+        -->
+      <section class="product-page">
+        <div class="left-wrapper">
+          <div class="thumbnail-wrapper">
+            <img src="./images/black-01.png" alt="Vans thumbnail" class="img-thumbnail main-thumbnail" />
+            <img src="./images/black-02.png" alt="Vans thumbnail" class="img-thumbnail" />
+            <img src="./images/black-03.png" alt="Vans thumbnail" class="img-thumbnail" />
+            <img src="./images/black-04.png" alt="Vans thumbnail" class="img-thumbnail" />
+          </div>
+          <div class="big-picture">
+            <img src="./images/black-01.png" alt="" />
+          </div>
+        </div>
+        <div class="right-wrapper">
+          <h2>Vans Old Skool</h2>
+          <div class="price-wrapper">
+            <h4>Price</h4>
+            <h3>61.95€</h3>
+          </div>
+          <div class="size-wrapper">
+            <h4>Size</h4>
+            <select name="size" id="idSize">
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+            </select>
+          </div>
+          <div class="color-wrapper">
+            <h4>Color: <b id='prod-color'>Black</b></h4>
+            <div class="color-thumbnails-wrapper">
+              <img src="./images/black-01.png" alt="Black" data-color="Black">
+              <img src="./images/red-01.png" alt="Red" data-color="Red">
+              <img src="./images/green-01.png" alt="Green" data-color="Green">
+              <img src="./images/yellow-01.png" alt="Yellow" data-color="Yellow">
+              <img src="./images/blue-01.png" alt="Blue" data-color="Blue">
+            </div>
+          </div>
+          <div class="btn-buy">
+            <input type="submit" value="Buy" id="buy-btn" class="submitbutton">
+          </div>
+        </div>
+      </section>
+      <!--
+      =================================
+      FORM 1 - PROFILE
+      =================================
+      -->
+      <section class="section-formulary profile">
+        <form action="/action_page.php">
+          <h3>Profile</h3>
+          <div>
+            <label class="label-form label-profile" for="Uname">Username</label>
+            <input class="input-form input-profile" type="text" id="Uname" name="Uname" maxlength="20" required>
+            <p class="text-form-error hide p-Uname">Insert valid username</p>
+          </div>
+          <div>
+            <label class="label-form label-profile" for="email">Email</label>
+            <input class="input-form input-profile" type="email" name="write_email" id="email" required
+              placeholder="test@gmail.com" pattern="([a-z\d]+(\.|_|-)?)+@[a-z\d]+\.[a-z]{2,50}\b">
+            <p class="text-form-error hide p-email">Insert valid email</p>
+          </div>
+          <div>
+            <label class="label-form label-profile" for="pass">Password</label>
+            <input class="input-form input-profile" type="password" id="pass"
+              title="Password must contain at least 8 characters, including UPPER/lowercase and numbers" maxlength="20"
+              name="pwd" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+            <p class="text-form-error hide p-Pass">Insert valid Password</p>
+            <!--<div class="password-validation" id="checksField">-->
+            <div class="password-validation" id="checksField">
+              <h6>Password must contain the following:</h6>
+              <p id="letter" class="wrong">A lowercase letter</p>
+              <p id="capital" class="wrong">A capital (uppercase) letter</p>
+              <p id="number" class="wrong">A number</p>
+              <p id="special" class="wrong">A special</p>
+              <p id="lenght" class="wrong">Min length 8 characters</p>
+            </div>
+          </div>
+          <div>
+            <label class="label-form label-profile" for="pwd2">Confirm Password</label>
+            <input class="input-form input-profile" id="pwd2" type="password"
+              title="Please enter the same Password as above" maxlength="20" required
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}">
+            <p class="text-form-error hide p-pass2">Password do not match</p>
+          </div>
+        </form>
+      </section>
+      <!--
+      =================================
+      FORM 2 - Address
+      =================================
+      -->
+      <section class="address">
+        <form class="address-flex" action="/action_page.php">
+          <h3>Address</h3>
+          <div>
+            <div>
+              <label class="label-form label-adress" for="Fname">First Name</label>
+              <input class="input-form input-adress" type="text" id="fname" name="fname" maxlength="20" required
+                tabindex="0">
+              <p class="text-form-error hide p-fname">Please insert first name</p>
+            </div>
+
+            <div>
+              <label class="label-form label-adress" for="Lname">Last Name</label>
+              <input class="input-form input-adress" type="text" id="lname" name="lname" maxlength="20" required
+                tabindex="0">
+              <p class="text-form-error hide p-lname">Please insert last name</p>
+            </div>
+
+            <div>
+              <label class="label-form label-adress" for="Birthday">Birthday</label>
+              <input class="input-form input-adress" type="date" id="Birthday" name="Birthday" required tabindex="0">
+              <p class="text-form-error hide p-birthday">Please insert your birthday</p>
+            </div>
+
+            <div>
+              <label class="label-form label-adress" for="address1">Address 1</label>
+              <input class="input-form input-adress" type="text" id="address1" name="address1" maxlength="50" required
+                tabindex="0">
+              <p class="text-form-error hide p-address1">Please insert your address</p>
+            </div>
+
+            <div>
+              <label class="label-form label-adress" for="address2">Address 2</label>
+              <input class="input-form input-adress" type="text" id="address2" name="address2" maxlength="50"
+                tabindex="0">
+              <!-- <p class="text-form-error hide">Check valid password</p> -->
+            </div>
+          </div>
+          <div class="address-wrapper-right">
+
+            <div>
+              <label class="label-form label-adress" for="pcode">Postal Code</label>
+              <input class="input-form input-adress" type="number" id="pcode"
+                onKeyPress="if(this.value.length==5) return false;" max="99999" tabindex="0" required>
+              <p class="text-form-error hide p-pcode">Please insert a valid postal code</p>
+            </div>
+
+            <div>
+              <label class="label-form label-adress" for="Country">Country</label>
+              <select class="select-form select-country" name="Country" id="country" required tabindex="0">
+                <option class="country-option" value="Andorra">Andorra</option>
+                <option class="country-option" value="Spain" selected>Spain</option>
+                <option class="country-option" value="France">France</option>
+                <option class="country-option" value="Germany">Germany</option>
+                <option class="country-option" value="Greece">Greece</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="label-form label-adress" for="Phone">Phone</label>
+              <div class="div-phone">
+                <select class="select-form select-phone" name="PhoneCountryCode" id="PhoneCountryCode" tabindex="0">
+                  <option class="code-option" value="376-AND">AND +376</option>
+                  <option class="code-option" value="34-ES" selected>ES +34</option>
+                  <option class="code-option" value="33-FR">FR +33</option>
+                  <option class="code-option" value="49-GER">GER +49</option>
+                  <option class="code-option" value="30-GRC">GRC +30</option>
+                </select>
+                <input class="input-form input-adress input-phone" type="number" name="tel" id="tel"
+                  onKeyPress="if(this.value.length==9) return false;" required tabindex="0">
+              </div>
+              <p class="text-form-error hide p-tel">Please insert a valid phone number</p>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!--
+      =================================
+      SHIPPING SECTION
+      =================================
+      -->
+      <section class="shipping-page">
+        <!-- Shipping form -->
+        <form name="formship">
+          <!-- radio buttons - shipping type -->
+          <h3>Shipping</h3>
+          <div>
+            <div class="shipping-type">
+              <label for="type">Shipping type</label>
+              <label class="form-radio">
+                <!-- hidden Input -->
+                <input class="form-radio__input" type="radio" id="free" name="type" value="free" checked>
+                <!-- Imagen en sustitucion -->
+                <span class="form-radio__show form-radio__show--radio"></span>
+                <span class="form-radio__text">Free shipment (72H)</span>
+              </label>
+              <label class="form-radio">
+                <!-- hidden Input -->
+                <input class="form-radio__input" type="radio" id="extra" name="type" value="extra">
+                <!-- Imagen en sustitucion -->
+                <span class="form-radio__show form-radio__show--radio"></span>
+                <span class="form-radio__text">Extra shipping (48H) <b>4,99€</b></span>
+              </label>
+              <label class="form-radio">
+                <!-- hidden Input -->
+                <input class="form-radio__input" type="radio" id="premium" name="type" value="premium">
+                <!-- Imagen en sustitucion -->
+                <span class="form-radio__show form-radio__show--radio"></span>
+                <span class="form-radio__text">Premium (24H) <b>9,99€</b></span>
+              </label>
+            </div>
+            <div class="shiptemplate">
+              <label>Your order will arrive between: </label>
+              <p><b id="date1"> </b> and <b id="date2"></b></p>
+            </div>
+            <!-- checkbox - gift -->
+            <div class="gift">
+              <label class="form-checkbox">
+                <!-- hidden Input -->
+                <input class="form-checkbox__input" type="checkbox" id="check-gift" name="conditions" value="conditions">
+                <!-- Imagen en sustitucion -->
+                <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+                <span class="form-checkbox__text">It is a gift?</span>
+              </label>
+            </div>
+          </div>
+          <div>
+          <!-- gift message -->
+          <div class="wrp-gift-message">
+            <label for="gift-title">Gift title</label>
+            <input class="input-form" type="text" id="gift-title" name="gift-title" maxlength="20" required>
+            <label for="gift-message"> Gift message</label>
+            <textarea id="gift-message" name="gift-message" rows="7" cols="50"></textarea>
+          </div>
+          <!-- upload file -->
+          <div class="file-input">
+            <label for="file">Gift wrapper image</label>
+            <input type="file" id="file" class="file" accept="image/jpeg, image/png">
+            <label for="file" class="loadFile">Select image
+              <i class="far fa-file-image"></i>
+            </label>
+          </div>
+          </div>
+        </form>
+      </section>
+
+      <!--
+      =================================
+      FORM 4 - Finish
+      =================================
+      -->
+      <section class="finished">
+        <h3>Your Purchase</h3>
+        <div class="finished-container">
+          <div class="left-wrapper-finish">
+            <img src="./images/black-01.png" alt="" id="img-purchase-1">
+          </div>
+          <div class="right-big-container">
+            <div class="central-wrapper-finish">
+              <div class="product-finish-text">
+                <h3>Modelo de producto</h3>
+                <p>Size: </p>
+                <p>Color: </p>
+                <p class="delivery-estimation">Estimate delivery date:</p>
+                <P>Between:</P>
+                <p>and:</p>
+              </div>
+            </div>
+            <div class="right-wrapper-finish">
+              <h4>Your Order</h4>
+              <hr>
+              <p>Shoes:</p>
+              <p>Shipping:</p>
+              <hr>
+              <p>Total:</p>
+            </div>
+            <div class="finished-checkbox">
+              <label class="form-checkbox">
+                <input class="form-checkbox__input" id="conditions" type="checkbox" name="conditions" value="conditions">
+                <span class="form-checkbox__show form-checkbox__show--checkbox"></span>
+              </label>
+              <label for="conditions"> I have read and I accept the terms and conditions.</label> <br>
+              <p class="text-form-error hide p-buy-now-validation">Please accept the terms and conditions</p><br>
+              <button id='btn-buy-now-finished'>Buy now</button>
+              <button id='btn-start-again'>Start again</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  =================================
+      * Thank you!
+      =================================
+      -->
+      <section class="thankyou">
+        <div class='thankyou-box'>
+          <h3>Your order is complete! 🎉</h3>
+          <p>Thank you for your order!</p>
+        </div>
+        <div class="finished-container">
+          <div class="left-wrapper-finish">
+            <img src="./images/black-01.png" alt="" id="img-purchase-2">
+          </div>
+          <div class="right-big-container">
+            <div class="central-wrapper-finish">
+              <div class="product-finish-text">
+                <h3>Modelo de producto</h3>
+                <p>Size: </p>
+                <p>Color: </p>
+                <p class="delivery-estimation">ESTIMATE DELVERY DATE:</p>
+                <P>Between:</P>
+                <p>and:</p>
+              </div>
+            </div>
+            <div class="right-wrapper-finish">
+              <h4>Payment details</h4>
+              <hr>
+              <p>Shoes:</p>
+              <p>Shipping:</p>
+              <hr>
+              <p>Total:</p>
+            </div>
+            <div class="finished-checkbox">
+              <p id="total-time">Your registration took: <b></b></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div class="timeout-error hide">
+  </div>
+
+  <!-- 
+    =================================
+    FOOTER
+    =================================
+ -->
+  <div class='foot'>
+    <div class="foot-sm">
+      <a class="socialmedia-link nav-link" href="#"><i class="fab fa-youtube"></i></a>
+      <a class="socialmedia-link nav-link" href="#"><i class="fab fa-instagram"></i></a>
+      <a class="socialmedia-link nav-link" href="#"><i class="fab fa-facebook"></i></a>
+      <p>Copyright © 2021, Dream Team.</p>
+    </div>
+    <div class="logo logo-foot hide">
+      <img src="./images/logo-dream-shoes.png" alt="" class="dream-logo">
+    </div>
+    <div class="page-buttons hide">
+      <input class="page-input-button" type="reset" value="Clear Form" tabindex="-1">
+      <input class="submitbutton page-input-button" type="submit" id="btnNext" value="Next" tabindex="0">
+    </div>
+  </div>
+
+  <!--time out-->
+  <script src="./js/timeout.js" type="module"></script>
+  <!--Update product info-->
+  <script src="./js/update-product-info.js" defer></script>
+  <!--Submit button demo-->
+  <script src="./js/button-page-flow.js" type="module"></script>
+  <script src="./js/shipping.js" type="module"></script>
+  <script src="./js/form/form-validation.js" type="module"></script>
+</body>
+
+</html>
